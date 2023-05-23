@@ -1,0 +1,115 @@
+
+{% extends "ayyppahotel.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+section li {
+  margin-bottom: 20px;
+}
+
+section li h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+section li p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+section li strong {
+  font-size: 16px;
+  color: #333;
+}
+
+</style>
+<main>
+  <h2>Our Menu</h2>
+  <section id="breakfast">
+    <h3>Breakfast</h3>
+    <ul>
+      <li>
+        <h4>Dosa</h4>
+        <p>A crispy, savory crepe made from fermented rice batter and served with sambar and chutney.</p>
+        <p><strong>Price:</strong> $7.00</p>
+      </li>
+      <li>
+        <h4>Idli</h4>
+        <p>A soft and fluffy steamed cake made from fermented rice batter, served with sambar and chutney.</p>
+        <p><strong>Price:</strong> $6.00</p>
+      </li>
+      <li>
+        <h4>Vada</h4>
+        <p>A crispy and savory doughnut-shaped snack made from lentils and spices, served with chutney.</p>
+        <p><strong>Price:</strong> $4.00</p>
+      </li>
+      <li>
+        <h4>Uthappam</h4>
+        <p>A thick pancake topped with onions, tomatoes, and spices, served with chutney.</p>
+        <p><strong>Price:</strong> $8.00</p>
+      </li>
+    </ul>
+  </section>
+  <section id="drinks">
+    <h3>Drinks</h3>
+    <ul>
+      <li>
+        <h4>Masala Chai</h4>
+        <p>A spicy and aromatic tea made with black tea, milk, and a blend of warming spices.</p>
+        <p><strong>Price:</strong> $3.00</p>
+      </li>
+      <li>
+        <h4>Lassi</h4>
+        <p>A refreshing yogurt-based drink flavored with mango, rosewater, or cardamom.</p>
+        <p><strong>Price:</strong> $4.00</p>
+      </li>
+      <li>
+        <h4>Filter Coffee</h4>
+        <p>A rich and strong coffee made using a traditional Indian filter, served with milk and sugar on the side.</p>
+        <p><strong>Price:</strong> $3.00</p>
+      </li>
+      <li>
+        <h4>South Indian Lemonade</h4>
+        <p>A tangy and refreshing drink made with lemon juice, sugar, and a hint of ginger and salt.</p>
+        <p><strong>Price:</strong> $2.00</p>
+      </li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <p>Copyright © 2023 Ayyappa Hotel</p>
+</footer>
+{% endblock %}
+
+
+
