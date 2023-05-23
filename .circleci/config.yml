@@ -12,11 +12,11 @@ jobs:
           name: install dependencies
           command: pip install -r requirements.txt
 
-      - run:
-          name: Start Docker daemon
-          command: |
-            sudo service docker start
-            sleep 5  # Wait for Docker daemon to start
+      # - run:
+      #     name: Start Docker daemon
+      #     command: |
+      #       sudo service docker start
+      #       sleep 5  # Wait for Docker daemon to start
       
       - run:
           name: build docker image
