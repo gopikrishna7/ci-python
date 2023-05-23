@@ -14,4 +14,4 @@ jobs:
       
       - run:
           name: build docker image
-          command: docker build -t python-ci:${CIRCLE_SHA1}
+          command: docker build -t python-ci:${CIRCLE_SHA1} .
