@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  docker: circleci/docker@2.2.0
 
 jobs:
   build:
@@ -18,6 +20,5 @@ jobs:
       #       sudo service docker start
       #       sleep 5  # Wait for Docker daemon to start
       
-      - run:
-          name: build docker image
-          command: docker build -t python-ci:${CIRCLE_SHA1} .
+      - docker/build:
+          image: python
