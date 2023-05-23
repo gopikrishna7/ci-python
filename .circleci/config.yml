@@ -6,3 +6,5 @@ workflows:
     jobs:
       - docker/publish:
           image: gopikrishna99899/python-test
+          use-docker-credentials-store: true
+
