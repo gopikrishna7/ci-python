@@ -5,5 +5,4 @@ workflows:
   build-docker-image-only:
     jobs:
       - docker/publish:
-          deploy: false
           image: gopikrishna99899/python-test
