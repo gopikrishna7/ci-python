@@ -6,5 +6,8 @@ workflows:
     jobs:
       - docker/publish:
           image: gopikrishna99899/python-test
+          tag: $CIRCLE_SHA1
           context: docker-hub
+      
+          
 
