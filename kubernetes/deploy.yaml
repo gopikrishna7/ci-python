@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: gopikrishna99899/python-test:9b2be4068c5cd64eefed7f8e9a08607af65c362d
+        ports:
+        - containerPort: 5000
