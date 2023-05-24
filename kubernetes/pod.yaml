@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: test-p
-    image: gopikrishna99899/python-test
+    image: gopikrishna99899/python-test:9b2be4068c5cd64eefed7f8e9a08607af65c362d
     ports:
       - containerPort: 5000
