@@ -22,10 +22,10 @@ jobs:
       - set-env
       - docker/check
       - docker/build:
-          image: gopikrishna99899/python-test
+          image: gopikrishna99899/python-imageupdate
           tag: ${UNIX_TIMESTAMP}
       - docker/push:
-          image: gopikrishna99899/python-test
+          image: gopikrishna99899/python-imageupdate
           tag: ${UNIX_TIMESTAMP}
 workflows:
   build-docker-image-only:
