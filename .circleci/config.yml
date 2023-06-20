@@ -6,7 +6,7 @@ orbs:
 jobs:
   build-image:
     docker:
-      - image: docker:git
+      - image: docker
     steps:
       - checkout
       - docker/build:
