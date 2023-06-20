@@ -1,12 +1,23 @@
 version: 2.1
 orbs:
   docker: circleci/docker@2.2.0
+  slack: circleci/slack@4.4.4
+
+jobs:
+  build-image:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - docker/build:
+          image: gopikrishna99899/python-test
+          tag: latest
+      - docker/push:
+          image: gopikrishna99899/python-test
+          tag: latest
 workflows:
   build-docker-image-only:
     jobs:
-      - docker/publish:
-          image: gopikrishna99899/python-test
-          tag: ${UNIX_TIMESTAMP}-${CIRCLE_SHA1:0:7}
+      - build-image:
           context: docker-hub
       
           
