@@ -10,6 +10,7 @@ jobs:
     executor: docker/machine
     steps:
       - checkout
+      - docker/check
       - docker/build:
           image: gopikrishna99899/python-test
           tag: latest
