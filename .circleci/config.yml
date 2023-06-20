@@ -3,6 +3,15 @@ orbs:
   docker: circleci/docker@2.2.0
   slack: circleci/slack@4.4.4
 
+commands:
+  set-env:
+   description: set the env of unixtime
+   steps:
+     - run:
+        name: set-env
+        command: |
+         echo "export UNIX_TIMESTAMP=$(date +%s)" >> $BASH_ENV
+
 jobs:
   build-image:
     # docker:
@@ -10,13 +19,14 @@ jobs:
     executor: docker/machine
     steps:
       - checkout
+      - set-env
       - docker/check
       - docker/build:
           image: gopikrishna99899/python-test
-          tag: latest
+          tag: ${UNIX_TIMESTAMP}
       - docker/push:
           image: gopikrishna99899/python-test
-          tag: latest
+          tag: ${UNIX_TIMESTAMP}
 workflows:
   build-docker-image-only:
     jobs:
